@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Literal template "/Users/stephband/Sites/overflow-toggle/index.html.literal" -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+<meta name="author" content="Stephen Band" />
+<meta name="description" content="Documentation for overflow-toggle. " />
+<meta name="viewport" content="width=device-width" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@stephband">
+<meta property="og:title" content="overflow-toggle" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="https://stephen.band/overflow-toggle/card.jpg" />
+<meta property="og:url" content="https://stephen.band/overflow-toggle/" />
+
+
+<title>overflow-toggle</title>
+
+
+
+<script title="load">
+    document.documentElement.className += ' js loading';
+    // window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+    // Wait for other load handlers to run first - Bolt does a few things on
+    // load (eg. targetable scrolls) and we want them to run before the loading
+    // class is removed
+    window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+</script>
+
+
+    <script title="debug">
+        window.DEBUG = true;
+    </script>
+
+    <link rel="stylesheet" href="./docs/docs.css">
+    <link rel="stylesheet" href="./build/overflow-toggle.css">
+
+    <style>
+    [is="overflow-toggle"] {
+        font-size: 1rem;
+    }
+    </style>
+</head>
+
+<body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
+    <header class="x1 3x @1-x1 @1-4x @2-x2">
+        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>overflow-toggle<span class="tag-brace">&gt;</span><span style="font-size: 0.1666667em; font-family: 'MartianMono'; font-variation-settings: 'wght' 400, 'wdth' 96; letter-spacing: -0.125em;">1.0.0</span>
+</h1>
+        <p class="@1-no-wrap">The customised built-in <code>&lt;select&gt;</code> element that acts as a navigation menu.</p>
+    </header>
+
+    <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
+        <overflow-toggle show="Show" hide="Hide">
+           Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
+           python orientation semi colon incident. Duis aute irure indent tabs or spaces
+           velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
+           error memorandum qui officia nostrud operating system alertus. Hyper text
+           linkus operari avec computatrum ad coniungere hominum. Standards code est
+           pulchra on chromium et foxus sed souvent suckum in internet explorum.
+        </overflow-toggle>
+    </div>
+
+    
+
+<section class="x1 3x @1-4x @2-x2 x-stretch y-start">
+<h2 class="docs-text-02" id="installation">Installation</h2>
+<p>Download the latest release:</p>
+<p><a href="https://github.com/stephband/overflow-toggle/releases">github.com/stephband/overflow-toggle/releases</a></p>
+<p>Include the JS and CSS files:</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./overflow-toggle.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./overflow-toggle.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+
+</section>
+
+
+
+
+
+    <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
+        <h2 class="docs-text-02">Contribute</h2>
+        
+<p>
+    Fund development:
+    <a aria-label="Sponsor @stephband" href="https://github.com/sponsors/stephband" class="githubsponsor-button button">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" class="fill octicon octicon-heart icon-sponsor mr-1 v-align-middle color-fg-sponsors anim-pulse-in">
+            <path fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path>
+        </svg>
+        <span class="v-align-middle">Sponsor</span>
+    </a>
+</p>
+<ul>
+    <li>Contribute to the repo: <a href="https://github.com/stephband/overflow-toggle">github.com/stephband/overflow-toggle</a></li>
+    <li>Report a problem: <a href="https://github.com/stephband/overflow-toggle/issues">github.com/stephband/overflow-toggle/issues</a></li>
+</ul>
+
+    </section>
+
+    <hr class="x1 3x @1-6x @2-x2 @2-7x"/>
+
+    <footer class="x1 3x @1-4x @2-x2">
+        <small class="block">
+            <p class="docs-text-09">Made by <a href="https://stephen.band">Stephen Band</a> at <a href="https://cruncher.ch"><img style="width: 20px; display: inline-block; vertical-align: -0.5em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.</p>
+            <p class="docs-text-09">This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a> and <a href="https://github.com/evilmartians/mono">Martian Mono</a>.</p>
+            <p class="docs-text-09">Images <code>&copy;2022</code> Stephen Band.</p>
+            <p class="docs-text-09">Fonts used for this documentation are not included as part of the open source license covering the use of the <code>&lt;overflow-toggle&gt;</code> element.</p>
+        </small>
+    </footer>
+
+    <script type="module">
+        import './docs/docs.js';
+        import './build/overflow-toggle.js';
+    </script>
+</body>
