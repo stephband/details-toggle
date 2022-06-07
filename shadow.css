@@ -2,7 +2,7 @@
 @import '../bolt/elements/html.css';
 
 :host {
-    display: flex !important;
+    display: flex;
     /* Up to down */
     flex-direction: column;
     /* X direction */
@@ -17,6 +17,10 @@
     /* Default max-height */
     max-height: 7.5rem;
     --bleed: 1rem;
+}
+
+:host([hidden]) {
+    display: none;
 }
 
 :host > slot {
