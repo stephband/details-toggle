@@ -4,8 +4,7 @@ import events      from '../../dom/modules/events.js';
 import styles      from '../../dom/modules/styles.js';
 import Distributor from '../../dom/modules/distributor.js';
 import { px }      from '../../dom/modules/parse-length.js';
-
-const $ = Symbol('');
+import { $ }       from './config.js';
 
 
 function update(shadow, button, scrollHeight, maxHeight, slot, state) {
