@@ -1,4 +1,5 @@
 
+import events        from '../../dom/modules/events.js';
 import { trigger }   from '../../dom/modules/trigger.js';
 import { px, rem }   from '../../dom/modules/parse-length.js';
 import config, { $ } from './config.js';
@@ -102,6 +103,13 @@ export default {
             else {
                 view.maxHeight = undefined;
                 style.setProperty('max-height', '');
+
+                // Cannot set 'none' for unknown reasons
+                slot.style.setProperty('-webkit-line-clamp', '9999');
+                events('transitionend', slot)
+                .slice(0, 1)
+                .each((e) => slot.style.setProperty('-webkit-line-clamp', ''));
+
                 button.textContent = view.showText;
 
                 // We have to set state on the view AND on the attribute

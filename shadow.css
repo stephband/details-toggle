@@ -43,8 +43,12 @@
     row-gap: inherit;
 
     /* Won't work – multiline text, innit – but we can always dream */
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: inherit;
+            line-clamp: inherit;
 
     margin-top: calc(-1 * var(--bleed));
     margin-left: calc(-1 * var(--bleed));
@@ -61,6 +65,11 @@
 }
 
 :host([open]) > slot {
+    display: block;
+
+    -webkit-line-clamp: none !important;
+            line-clamp: none !important;
+
     /* Allow overflow while open */
     margin-bottom: calc(-1 * var(--bleed));
     padding-bottom: var(--bleed);

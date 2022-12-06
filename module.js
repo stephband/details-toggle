@@ -48,7 +48,4 @@ const stylesheet =
     window.overflowToggleStylesheet ||
     import.meta.url.replace(/\/[^\/]*([?#].*)?$/, '/') + 'overflow-toggle-shadow.css';
 
-export default element('<overflow-toggle>', lifecycle, properties, stylesheet);
-
-// Log registration to console
-window.console && window.console.log('%c<overflow-toggle>%c registered (docs at %chttps://stephen.band/overflow-toggle/%c)', 'color: #3a8ab0; font-weight: 600;', 'color: #888888; font-weight: 400;', 'color: inherit; font-weight: 400;', 'color: #888888; font-weight: 400;');
+export default element('<overflow-toggle>', lifecycle, properties, stylesheet, 'documentation - stephen.band/overflow-toggle/');
