@@ -103,6 +103,6 @@
 
 :host > [part="button"]:focus {
     outline-width: 0;
-    border-color: var(--focus-border-color);
+    border-color: var(--focus-fg);
     box-shadow: var(--focus-shadow);
 }
