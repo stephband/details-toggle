@@ -75,6 +75,15 @@ export default {
                 return;
             }
 
+            // We must unset line-clamp before measuring scrollHeight, as it
+            // has side-effects on children that alter the intrinsic height
+            slot.style.setProperty('-webkit-line-clamp', '9999');
+
+            // Put line-clamp back to its CSS value when the transition is over
+            events('transitionend', slot)
+            .slice(0, 1)
+            .each((e) => slot.style.setProperty('-webkit-line-clamp', ''));
+
             if (value) {
                 const scrollHeight    = slot.scrollHeight;
                 const computedElement = getComputedStyle(this);
@@ -89,8 +98,10 @@ export default {
                     + 8 ;
 
                 // Store maxHeight while element is open
-                view.maxHeight = computedElement['max-height'];
-                view.maxHeight = view.maxHeight === 'none' ? 0 : view.maxHeight ;
+                view.maxHeight = computedElement['max-height'] === 'none' ?
+                    0 :
+                    computedElement['max-height'];
+
                 style.setProperty('max-height', rem(maxHeight) + 'rem', 'important');
                 button.textContent = view.hideText;
 
@@ -103,12 +114,6 @@ export default {
             else {
                 view.maxHeight = undefined;
                 style.setProperty('max-height', '');
-
-                // Cannot set 'none' for unknown reasons
-                slot.style.setProperty('-webkit-line-clamp', '9999');
-                events('transitionend', slot)
-                .slice(0, 1)
-                .each((e) => slot.style.setProperty('-webkit-line-clamp', ''));
 
                 button.textContent = view.showText;
 
