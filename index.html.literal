@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    ${ include('../bolt/templates/head.literal', './package.json') }
+    ${ include('../literal/templates/head.literal', './package.json') }
 
     <script title="debug">
         window.DEBUG = true;
     </script>
 
     <link rel="stylesheet" href="./docs/docs.css">
-    <link rel="stylesheet" href="./build/overflow-toggle.css">
+    <link rel="stylesheet" href="./module.css">
 
     <style>
     [is="overflow-toggle"] {
@@ -21,17 +21,17 @@
 <body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
     <header class="x1 3x @1-x1 @1-4x @2-x2">
         <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>overflow-toggle<span class="tag-brace">&gt;</span>${ include('./docs/templates/version.literal', './package.json') }</h1>
-        <p class="@1-no-wrap">The customised built-in <code>&lt;select&gt;</code> element that acts as a navigation menu.</p>
     </header>
 
     <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <overflow-toggle show="Show" hide="Hide">
-           Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-           python orientation semi colon incident. Duis aute irure indent tabs or spaces
-           velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-           error memorandum qui officia nostrud operating system alertus. Hyper text
-           linkus operari avec computatrum ad coniungere hominum. Standards code est
-           pulchra on chromium et foxus sed souvent suckum in internet explorum.
+        <overflow-toggle>
+            <h4 slot="summary">Crunchum ipsum</h4>
+            Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
+            python orientation semi colon incident. Duis aute irure indent tabs or spaces
+            velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
+            error memorandum qui officia nostrud operating system alertus. Hyper text
+            linkus operari avec computatrum ad coniungere hominum. Standards code est
+            pulchra on chromium et foxus sed souvent suckum in internet explorum.
         </overflow-toggle>
     </div>
 
@@ -55,6 +55,6 @@
 
     <script type="module">
         import './docs/docs.js';
-        import './build/overflow-toggle.js';
+        import './module.js';
     </script>
 </body>

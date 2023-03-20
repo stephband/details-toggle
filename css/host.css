@@ -1,0 +1,52 @@
+:host {
+    --bleed: 1rem;
+
+    display: flex;
+    /* Up to down */
+    flex-direction: column;
+    /* X direction */
+    align-items: stretch;
+    /* Y direction */
+    justify-content: start;
+
+    font-size: inherit;
+    line-height: inherit;
+}
+
+:host([hidden]) {
+    display: none;
+}
+
+:host > slot[name="summary"] {
+
+}
+
+:host > slot:not([name]) {
+    max-height: 0;
+
+    margin-top: calc(-1 * var(--bleed));
+    margin-left: calc(-1 * var(--bleed));
+    margin-right: calc(-1 * var(--bleed));
+    margin-bottom: 0;
+    padding-top: var(--bleed);
+    padding-left: var(--bleed);
+    padding-right: var(--bleed);
+    padding-bottom: 0;
+
+    transition:
+        max-height 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
+}
+
+:host([open]) > slot:not([name]) {
+    max-height: none;
+
+    margin-bottom: calc(-1 * var(--bleed));
+    padding-bottom: var(--bleed);
+
+    transition:
+        max-height 0.4s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.4s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.4s cubic-bezier(0.26, 0, 0.5, 1);
+}

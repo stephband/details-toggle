@@ -1,39 +1,51 @@
 
-import { trigger }   from '../../dom/modules/trigger.js';
-import { px, rem }   from '../../dom/modules/parse-length.js';
-import config, { $ } from './config.js';
+import events      from '../../dom/modules/events.js';
+import { trigger } from '../../dom/modules/trigger.js';
+import { px }      from '../../dom/modules/parse-length.js';
+import { getInternals } from '../../dom/modules/element.js';
+
+
+function open(host, element) {
+    // Transition smoothly to open state by calculating and setting the
+    // target maxHeight of the slot for the duration of the transition
+    const scrollHeight  = element.scrollHeight;
+    const computed      = getComputedStyle(element);
+    const paddingTop    = px(computed.getPropertyValue('padding-top') || 0);
+    const paddingBottom = px(computed.getPropertyValue('padding-bottom') || 0);
+
+    events('transitionend', element)
+    .slice(0, 1)
+    .each((e) => element.style.maxHeight = '');
+
+    element.style.maxHeight = (paddingTop + scrollHeight + paddingBottom) + 'px';
+
+    host.setAttribute('open', '');
+}
+
+function close(host, element) {
+    // Transition smoothly to closed state by reading and setting the
+    // maxHeight briefly at the start of the transition
+    const scrollHeight  = element.scrollHeight;
+    const computed      = getComputedStyle(element);
+    const paddingBottom = px(computed.getPropertyValue('padding-bottom') || 0);
+    const marginBottom  = px(computed.getPropertyValue('margin-bottom') || 0);
+
+    element.style.transition    = 'none';
+    element.style.maxHeight     = scrollHeight + 'px';
+    element.style.paddingBottom = paddingBottom + 'px';
+    element.style.marginBottom  = marginBottom + 'px';
+
+    host.removeAttribute('open');
+
+    requestAnimationFrame(() => {
+        element.style.transition    = '';
+        element.style.maxHeight     = '';
+        element.style.paddingBottom = '';
+        element.style.marginBottom  = '';
+    });
+}
 
 export default {
-    show: {
-        /**
-        show="Show"
-        Text rendered into the toggle button when `overflow-toggle` is in
-        `open=false` state. Defaults to `"Show"`.
-        **/
-
-        attribute: function(value) {
-            const view = this[$];
-            view.showText = value || config.showText;
-            if (view.open) { return; }
-            view.button.textContent = value || config.showText ;
-        }
-    },
-
-    hide: {
-        /**
-        hide="Hide"
-        Text rendered into the toggle button when `overflow-toggle` is in
-        `open=true` state. Defaults to `"Hide"`.
-        **/
-
-        attribute: function(value) {
-            const view = this[$];
-            view.hideText = value || config.hideText;
-            if (!view.open) { return; }
-            view.button.textContent = value || config.hideText ;
-        }
-    },
-
     open: {
         /**
         open=""
@@ -45,8 +57,8 @@ export default {
         },
 
         /**
-        .open = false
-        A boolean property describing the state of the `overflow-toggle` – `true`
+        .open=false
+        A boolean property describing the state of the `overflow-toggle`: `true`
         when the `overflow-toggle` is open, `false` when it is not.
         **/
 
@@ -61,53 +73,27 @@ export default {
         **/
 
         get: function() {
-            const view = this[$];
-            return view.open;
+            const state = getInternals(this);
+            return state.open;
         },
 
         set: function(value) {
-            const view = this[$];
-            const { button, slot, style } = view;
+            const state = getInternals(this);
+            const { button, slot, style } = state;
 
              // If toggle has not changed do nothing
-            if (!!value === view.open) {
+            if (!!value === state.open) {
                 return;
             }
 
             if (value) {
-                const scrollHeight    = slot.scrollHeight;
-                const computedElement = getComputedStyle(this);
-                const computedButton  = getComputedStyle(button);
-                const maxHeight = scrollHeight
-                    // plus button height
-                    + button.clientHeight
-                    // plus button margins
-                    + px(computedButton['margin-top'] || 0)
-                    + px(computedButton['margin-bottom'] || 0)
-                    // plus a sneaky safety margin, no-one will notice
-                    + 8 ;
-
-                // Store maxHeight while element is open
-                view.maxHeight = computedElement['max-height'];
-                view.maxHeight = view.maxHeight === 'none' ? 0 : view.maxHeight ;
-                style.setProperty('max-height', rem(maxHeight) + 'rem', 'important');
-                button.textContent = view.hideText;
-
-                // We have to set state on the view AND on the attribute
-                // if we want it to update
-                view.open = true;
-                this.setAttribute('open', '');
+                state.open = true;
+                open(this, slot);
                 trigger('overflow-activate', this);
             }
             else {
-                view.maxHeight = undefined;
-                style.setProperty('max-height', '');
-                button.textContent = view.showText;
-
-                // We have to set state on the view AND on the attribute
-                // if we want it to update
-                view.open = false;
-                this.removeAttribute('open');
+                state.open = false;
+                close(this, slot);
                 trigger('overflow-deactivate', this);
             }
         }
