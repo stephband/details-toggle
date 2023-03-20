@@ -1,6 +1,6 @@
 /* details-toggle 
    1.0.0
    By Stephen Band
-   Built 2023-03-20 21:37 */
+   Built 2023-03-20 21:44 */
 
 details-toggle{display:block;box-sizing:border-box}details-toggle:not(:defined){max-height:none}.loading details-toggle,.resizing details-toggle{transition:none!important}
