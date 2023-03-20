@@ -14,16 +14,7 @@ Include the JS and CSS files:
 **/
 
 
-/** <details-toggle>
-
-Import `<details-toggle>` custom element. This registers the custom element and
-upgrades instances already in the DOM.
-
-```html
-<script type="module" src="bolt/elements/details-toggle.js"></script>
-```
-
-Use it thus:
+/** Usage
 
 ```html
 <details-toggle>
@@ -36,10 +27,7 @@ Use it thus:
 </details-toggle>
 ```
 
-An `details-toggle` is collapsed by default to it's own `max-height`. The
-default `max-height` of an `details-toggle` is `7.5rem` (`120px`). When toggled
-open, that `max-height` is overridden to include the whole height of the
-content, and the state is transitioned from closed to open via CSS.
+A `details-toggle` is collapsed by default.
 **/
 
 import element    from '../dom/modules/element.js';

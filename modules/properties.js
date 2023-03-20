@@ -63,12 +63,12 @@ export default {
         **/
 
         /**
-        'overflow-activate'
+        'details-activate'
         Sent from `details-toggle` when opened.
         **/
 
         /**
-        'overflow-deactivate'
+        'details-deactivate'
         Sent from `details-toggle` when closed.
         **/
 

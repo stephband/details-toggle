@@ -36,7 +36,11 @@
     </div>
 
     ${ include('./docs/templates/content.literal', comments("./module.js")) }
-    ${ include('../literal/documentation/templates/element.literal', comments("./module.js", "./modules/properties.js")) }
+    ${ include('../literal/documentation/templates/element.literal', comments(
+        "./module.js",
+        "./modules/properties.js",
+        "./css/host.css"
+    )) }
 
     <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
         <h2 class="docs-text-02">Contribute</h2>
