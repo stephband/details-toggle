@@ -3,10 +3,7 @@
 <html lang="en">
 <head>
     ${ include('../literal/templates/head.literal', './package.json') }
-
-    <script title="debug">
-        window.DEBUG = true;
-    </script>
+    ${ include('../literal/documentation/templates/head.literal', './package.json') }
 
     <link rel="stylesheet" href="./docs/docs.css">
     <link rel="stylesheet" href="./module.css">
@@ -29,9 +26,7 @@
             Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
             python orientation semi colon incident. Duis aute irure indent tabs or spaces
             velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-            error memorandum qui officia nostrud operating system alertus. Hyper text
-            linkus operari avec computatrum ad coniungere hominum. Standards code est
-            pulchra on chromium et foxus sed souvent suckum in internet explorum.
+            error memorandum qui officia nostrud operating system alertus.
         </details-toggle>
     </div>
 
