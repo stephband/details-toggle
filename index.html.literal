@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./module.css">
 
     <style>
-    [is="overflow-toggle"] {
+    [is="details-toggle"] {
         font-size: 1rem;
     }
     </style>
@@ -20,11 +20,11 @@
 
 <body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
     <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>overflow-toggle<span class="tag-brace">&gt;</span>${ include('./docs/templates/version.literal', './package.json') }</h1>
+        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span>${ include('./docs/templates/version.literal', './package.json') }</h1>
     </header>
 
     <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <overflow-toggle>
+        <details-toggle>
             <h4 slot="summary">Crunchum ipsum</h4>
             Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
             python orientation semi colon incident. Duis aute irure indent tabs or spaces
@@ -32,10 +32,11 @@
             error memorandum qui officia nostrud operating system alertus. Hyper text
             linkus operari avec computatrum ad coniungere hominum. Standards code est
             pulchra on chromium et foxus sed souvent suckum in internet explorum.
-        </overflow-toggle>
+        </details-toggle>
     </div>
 
     ${ include('./docs/templates/content.literal', comments("./module.js")) }
+    ${ include('../literal/documentation/templates/element.literal', comments("./module.js", "./modules/properties.js")) }
 
     <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
         <h2 class="docs-text-02">Contribute</h2>
@@ -49,7 +50,7 @@
             <p class="docs-text-09">Made by <a href="https://stephen.band">Stephen Band</a> at <a href="https://cruncher.ch"><img style="width: 20px; display: inline-block; vertical-align: -0.5em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.</p>
             <p class="docs-text-09">This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a> and <a href="https://github.com/evilmartians/mono">Martian Mono</a>.</p>
             <p class="docs-text-09">Images <code>&copy;2022</code> Stephen Band.</p>
-            <p class="docs-text-09">Fonts used for this documentation are not included as part of the open source license covering the use of the <code>&lt;overflow-toggle&gt;</code> element.</p>
+            <p class="docs-text-09">Fonts used for this documentation are not included as part of the open source license covering the use of the <code>&lt;details-toggle&gt;</code> element.</p>
         </small>
     </footer>
 

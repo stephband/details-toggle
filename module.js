@@ -3,37 +3,41 @@
 
 Download the latest release:
 
-[github.com/stephband/overflow-toggle/releases](https://github.com/stephband/overflow-toggle/releases)
+[github.com/stephband/details-toggle/releases](https://github.com/stephband/details-toggle/releases)
 
 Include the JS and CSS files:
 
 ```html
-<link rel="stylesheet" href="./overflow-toggle.css" />
-<script type="module" src="./overflow-toggle.js"></script>
+<link rel="stylesheet" href="./details-toggle.css" />
+<script type="module" src="./details-toggle.js"></script>
 ```
 **/
 
 
-/** <overflow-toggle>
+/** <details-toggle>
 
-Import `<overflow-toggle>` custom element. This also registers the custom
-element and upgrades instances already in the DOM.
+Import `<details-toggle>` custom element. This registers the custom element and
+upgrades instances already in the DOM.
 
 ```html
-<script type="module" src="bolt/elements/overflow-toggle.js"></script>
-
-<overflow-toggle show="Show" hide="Hide">
-    Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-    python orientation semi colon incident. Duis aute irure indent tabs or spaces
-    velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-    error memorandum qui officia nostrud operating system alertus. Hyper text
-    linkus operari avec computatrum ad coniungere hominum. Standards code est
-    pulchra on chromium et foxus sed souvent suckum in internet explorum.
-</overflow-toggle>
+<script type="module" src="bolt/elements/details-toggle.js"></script>
 ```
 
-An `overflow-toggle` is collapsed by default to it's own `max-height`. The
-default `max-height` of an `overflow-toggle` is `7.5rem` (`120px`). When toggled
+Use it thus:
+
+```html
+<details-toggle>
+    <h4 slot="summary">Crunchum ipsum</h4>
+    Crunchum ipsum dolor sit coder void, constructor function, sed
+    do while loop python orientation semi colon incident. Duis aute
+    irure indent tabs or spaces velit esse cilium buntum how crunchy
+    duntum. Excepteur tranquilis syntax error memorandum qui officia
+    nostrud operating system alertus.
+</details-toggle>
+```
+
+An `details-toggle` is collapsed by default to it's own `max-height`. The
+default `max-height` of an `details-toggle` is `7.5rem` (`120px`). When toggled
 open, that `max-height` is overridden to include the whole height of the
 content, and the state is transitioned from closed to open via CSS.
 **/
@@ -46,4 +50,4 @@ const stylesheet =
     window.overflowToggleStylesheet ||
     import.meta.url.replace(/\/[^\/]*([?#].*)?$/, '/') + 'shadow.css';
 
-export default element('<overflow-toggle>', lifecycle, properties, stylesheet);
+export default element('<details-toggle>', lifecycle, properties, stylesheet);

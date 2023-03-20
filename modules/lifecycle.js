@@ -1,9 +1,9 @@
 
-import create      from '../../dom/modules/create.js';
-import events      from '../../dom/modules/events.js';
-import styles      from '../../dom/modules/styles.js';
-import Distributor from '../../dom/modules/distributor.js';
-import { px }      from '../../dom/modules/parse-length.js';
+import create           from '../../dom/modules/create.js';
+import events           from '../../dom/modules/events.js';
+import styles           from '../../dom/modules/styles.js';
+import Distributor      from '../../dom/modules/distributor.js';
+import { px }           from '../../dom/modules/parse-length.js';
 import { getInternals } from '../../dom/modules/element.js';
 
 const assign = Object.assign;
@@ -29,7 +29,7 @@ export default {
     construct: function(shadow) {
         /*
         Create a DOM of the form:
-        <link rel="stylesheet" href="/source/bolt/elements/overflow-toggle.shadow.css" />
+        <link rel="stylesheet" href="/source/bolt/elements/details-toggle.shadow.css" />
         <slot name="summary">
             <button></button>
         </slot>

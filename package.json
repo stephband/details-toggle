@@ -1,6 +1,6 @@
 {
-    "title": "overflow-toggle",
-    "name": "@stephband/overflow-toggle",
+    "title": "details-toggle",
+    "name": "@stephband/details-toggle",
     "version": "1.0.0",
     "description": "",
     "keywords": ["toggle", "overflow", "summary", "details", "open", "close", "show", "hide", "component", "custom", "element"],
@@ -10,22 +10,22 @@
         "email": "stephband@cruncher.ch"
     },
     "card": {
-        "image": "https://stephen.band/overflow-toggle/card.jpg"
+        "image": "https://stephen.band/details-toggle/card.jpg"
     },
-    "homepage": "https://stephen.band/overflow-toggle/",
+    "homepage": "https://stephen.band/details-toggle/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/stephband/overflow-toggle.git"
+        "url": "https://github.com/stephband/details-toggle.git"
     },
     "bugs": {
-        "url": "https://github.com/stephband/overflow-toggle/issues"
+        "url": "https://github.com/stephband/details-toggle/issues"
     },
     "funding": {
         "github": "https://github.com/sponsors/stephband"
     },
     "license" : "GPL-3.0",
     "type": "module",
-    "browser": "./build/overflow-toggle.js",
+    "browser": "./build/details-toggle.js",
     "files": [
         "build/*",
         "docs/docs.css",

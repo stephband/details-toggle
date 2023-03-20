@@ -19,9 +19,7 @@
 @import "../../bolt/classes/device.css";
 @import "../../bolt/classes/toggle-block.css";
 
-@import "../../bolt/documentation/prism-cruncher.css";
-@import "../../bolt/documentation/documentation.css";
-@import "../../bolt/documentation/atoms.css";
+@import "../../literal/documentation/module.css";
 
 
 @font-face {
@@ -232,7 +230,8 @@ small > p + p { margin-top: 0; }
 /* Github sponsor button */
 
 .githubsponsor-button {
-    --height: 1.75em;
+    --size: 1.75em;
+
     width: 200px;
     color: #24292f;
     background-color: #f6f8fa;

@@ -1,14 +1,14 @@
 
-overflow-toggle {
+details-toggle {
     display: block;
     box-sizing: border-box;
 }
 
-overflow-toggle:not(:defined) {
+details-toggle:not(:defined) {
     max-height: none;
 }
 
-.loading overflow-toggle,
-.resizing overflow-toggle {
+.loading details-toggle,
+.resizing details-toggle {
     transition: none !important;
 }

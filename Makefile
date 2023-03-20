@@ -14,6 +14,6 @@ docs:
 
 modules:
 	# Run separate builds to package them as standalones
-	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./overflow-toggle.js ./module.js
-	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./overflow-toggle.css ./module.css
-	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./overflow-toggle-shadow.css ./shadow.css
+	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./details-toggle.js ./module.js
+	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./details-toggle.css ./module.css
+	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js ./details-toggle-shadow.css ./shadow.css

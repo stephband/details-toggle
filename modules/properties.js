@@ -1,7 +1,7 @@
 
-import events      from '../../dom/modules/events.js';
-import { trigger } from '../../dom/modules/trigger.js';
-import { px }      from '../../dom/modules/parse-length.js';
+import events           from '../../dom/modules/events.js';
+import { trigger }      from '../../dom/modules/trigger.js';
+import { px }           from '../../dom/modules/parse-length.js';
 import { getInternals } from '../../dom/modules/element.js';
 
 
@@ -49,7 +49,7 @@ export default {
     open: {
         /**
         open=""
-        A boolean attribute describing the state of the `overflow-toggle`.
+        A boolean attribute describing the state of the `details-toggle`.
         **/
 
         attribute: function(value) {
@@ -58,18 +58,18 @@ export default {
 
         /**
         .open=false
-        A boolean property describing the state of the `overflow-toggle`: `true`
-        when the `overflow-toggle` is open, `false` when it is not.
+        A boolean property describing the state of the `details-toggle`: `true`
+        when the `details-toggle` is open, `false` when it is not.
         **/
 
         /**
         'overflow-activate'
-        Sent from `overflow-toggle` when opened.
+        Sent from `details-toggle` when opened.
         **/
 
         /**
         'overflow-deactivate'
-        Sent from `overflow-toggle` when closed.
+        Sent from `details-toggle` when closed.
         **/
 
         get: function() {
