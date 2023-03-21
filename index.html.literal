@@ -17,18 +17,22 @@
 
 <body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
     <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span>${ include('./docs/templates/version.literal', './package.json') }</h1>
+        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span>${ include('../literal/documentation/templates/version.literal', './package.json') }</h1>
+        <p>
+        The gods of the World Wide Web, in their eternal wisdom, delivered onto
+        us a <code>&lt;details&gt;</code> element that is impossible to style
+        with opening or closing transitions. The <code>&lt;details-toggle&gt;</code>
+        custom element provides an animated alternative.
+        </p>
     </header>
 
-    <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <details-toggle>
-            <h4 slot="summary">Crunchum ipsum</h4>
-            Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-            python orientation semi colon incident. Duis aute irure indent tabs or spaces
-            velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-            error memorandum qui officia nostrud operating system alertus.
-        </details-toggle>
-    </div>
+    <details-toggle class="x1 3x @1-4x @2-x2 x-stretch y-start">
+        <h4 slot="summary">Click to expand</h4>
+        Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
+        python orientation semi colon incident. Duis aute irure indent tabs or spaces
+        velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
+        error memorandum qui officia nostrud operating system alertus.
+    </details-toggle>
 
     ${ include('./docs/templates/content.literal', comments("./module.js")) }
     ${ include('../literal/documentation/templates/element.literal', comments(
@@ -53,8 +57,9 @@
         </small>
     </footer>
 
+    ${ include('../literal/documentation/templates/scripts.literal', './package.json') }
+
     <script type="module">
-        import './docs/docs.js';
-        import './module.js';
+        import DetailsToggle from './module.js';
     </script>
 </body>

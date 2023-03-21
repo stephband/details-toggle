@@ -35,7 +35,7 @@ import lifecycle  from './modules/lifecycle.js';
 import properties from './modules/properties.js';
 
 const stylesheet =
-    window.overflowToggleStylesheet ||
+    window.detailsToggleStylesheet ||
     import.meta.url.replace(/\/[^\/]*([?#].*)?$/, '/') + 'shadow.css';
 
 export default element('<details-toggle>', lifecycle, properties, stylesheet);

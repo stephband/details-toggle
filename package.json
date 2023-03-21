@@ -2,7 +2,7 @@
     "title": "details-toggle",
     "name": "@stephband/details-toggle",
     "version": "1.0.0",
-    "description": "",
+    "description": "The gods of the World Wide Web, in their eternal wisdom, delivered onto us a <details> element that is impossible to style with opening or closing transitions. The <details-toggle> custom element provides an animated alternative.",
     "keywords": ["toggle", "overflow", "summary", "details", "open", "close", "show", "hide", "component", "custom", "element"],
     "author": {
         "name": "Stephen Band",

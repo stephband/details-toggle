@@ -2,10 +2,10 @@
     /**
     --bleed: 1rem
 
-    A `<details-toggle>` hides the overflow of it's content slot. Normally this
-    would lead to truncation of shadows and any element that hangs outside the
-    content box, but to avoid this the content slot is made to 'bleed' larger
-    than the parent box. This variable controls the bleed distance.
+    A `<details-toggle>` hides the overflow of it's content. Normally this would
+    truncate shadows and any element that hangs outside its padding box, but to
+    avoid this the content slot is made to 'bleed' larger than the parent box.
+    This variable controls the bleed distance.
     **/
     --bleed: 1rem;
 
@@ -19,6 +19,20 @@
 
     font-size: inherit;
     line-height: inherit;
+
+    /* Inherited by the default slot. */
+    transition:
+        max-height 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
+}
+
+:host([open]) {
+    /* Inherited by the default slot. */
+    transition:
+        max-height 0.3s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1);
 }
 
 :host([hidden]) {
@@ -41,10 +55,7 @@
     padding-right: var(--bleed);
     padding-bottom: 0;
 
-    transition:
-        max-height 0.5s cubic-bezier(0.26, 0, 0.5, 1),
-        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
-        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
+    transition: inherit;
 }
 
 :host([open]) > slot:not([name]) {
@@ -52,9 +63,4 @@
 
     margin-bottom: calc(-1 * var(--bleed));
     padding-bottom: var(--bleed);
-
-    transition:
-        max-height 0.3s cubic-bezier(0.26, 0, 0.5, 1),
-        margin-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1),
-        padding-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1);
 }

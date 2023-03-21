@@ -5,14 +5,14 @@
 <head>
     <meta charset="utf-8" />
 <meta name="author" content="Stephen Band" />
-<meta name="description" content="Documentation for details-toggle. " />
+<meta name="description" content="Documentation for details-toggle. The gods of the World Wide Web, in their eternal wisdom, delivered onto us a <details> element that is impossible to style with opening or closing transitions. The <details-toggle> custom element provides an animated alternative." />
 <meta name="viewport" content="width=device-width" />
 
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@stephband">
 <meta property="og:title" content="details-toggle" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="The gods of the World Wide Web, in their eternal wisdom, delivered onto us a <details> element that is impossible to style with opening or closing transitions. The <details-toggle> custom element provides an animated alternative." />
 <meta property="og:image" content="https://stephen.band/details-toggle/card.jpg" />
 <meta property="og:url" content="https://stephen.band/details-toggle/" />
 
@@ -49,19 +49,23 @@
 
 <body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
     <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span><span style="font-size: 0.1666667em; font-family: 'MartianMono'; font-variation-settings: 'wght' 400, 'wdth' 96; letter-spacing: -0.125em;">1.0.0</span>
+        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span><span class="docs-text-10">1.0.0</span>
 </h1>
+        <p>
+        The gods of the World Wide Web, in their eternal wisdom, delivered onto
+        us a <code>&lt;details&gt;</code> element that is impossible to style
+        with opening or closing transitions. The <code>&lt;details-toggle&gt;</code>
+        custom element provides an animated alternative.
+        </p>
     </header>
 
-    <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <details-toggle>
-            <h4 slot="summary">Crunchum ipsum</h4>
-            Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-            python orientation semi colon incident. Duis aute irure indent tabs or spaces
-            velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-            error memorandum qui officia nostrud operating system alertus.
-        </details-toggle>
-    </div>
+    <details-toggle class="x1 3x @1-4x @2-x2 x-stretch y-start">
+        <h4 slot="summary">Click to expand</h4>
+        Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
+        python orientation semi colon incident. Duis aute irure indent tabs or spaces
+        velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
+        error memorandum qui officia nostrud operating system alertus.
+    </details-toggle>
 
     
 
@@ -185,10 +189,10 @@ when the <code>details-toggle</code> is open, <code>false</code> when it is not.
         <code class=" language-css">--bleed</code>
     </h4>
 
-    <p>A <code>&lt;details-toggle&gt;</code> hides the overflow of it’s content slot. Normally this
-would lead to truncation of shadows and any element that hangs outside the
-content box, but to avoid this the content slot is made to ‘bleed’ larger
-than the parent box. This variable controls the bleed distance.</p>
+    <p>A <code>&lt;details-toggle&gt;</code> hides the overflow of it’s content. Normally this would
+truncate shadows and any element that hangs outside its padding box, but to
+avoid this the content slot is made to ‘bleed’ larger than the parent box.
+This variable controls the bleed distance.</p>
 
 </details-toggle>
 
@@ -227,7 +231,11 @@ than the parent box. This variable controls the bleed distance.</p>
     </footer>
 
     <script type="module">
-        import './docs/docs.js';
-        import './module.js';
+import '../literal/documentation/module.js';
+</script>
+
+
+    <script type="module">
+        import DetailsToggle from './module.js';
     </script>
 </body>
