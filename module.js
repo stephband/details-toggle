@@ -16,18 +16,18 @@ Include the JS and CSS files:
 
 /** Use
 
+A `details-toggle` is collapsed to the height of its `slot="summary"` content by
+default, and opens to display all content when the summary content is clicked.
+
 ```html
 <details-toggle>
     <h4 slot="summary">Crunchum ipsum</h4>
     Crunchum ipsum dolor sit coder void, constructor function, sed
     do while loop python orientation semi colon incident. Duis aute
     irure indent tabs or spaces velit esse cilium buntum how crunchy
-    duntum. Excepteur tranquilis syntax error memorandum qui officia
-    nostrud operating system alertus.
+    duntum.
 </details-toggle>
 ```
-
-A `details-toggle` is collapsed by default.
 **/
 
 import element    from '../dom/modules/element.js';

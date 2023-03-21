@@ -40,11 +40,7 @@
         "./modules/properties.js",
         "./css/host.css"
     )) }
-
-    <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <h2 class="docs-text-02">Contribute</h2>
-        ${ include('./docs/templates/contribute.literal', './package.json') }
-    </section>
+    ${ include('../literal/documentation/templates/contribute.literal', './package.json') }
 
     <hr class="x1 3x @1-6x @2-x2 @2-7x"/>
 
