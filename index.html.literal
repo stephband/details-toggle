@@ -2,10 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    ${ include('../literal/templates/head.literal', './package.json') }
     ${ include('../literal/documentation/templates/head.literal', './package.json') }
 
-    <link rel="stylesheet" href="./docs/docs.css">
     <link rel="stylesheet" href="./module.css">
 
     <style>
