@@ -1,5 +1,5 @@
 
-/** Installation
+/** Install
 
 Download the latest release:
 
@@ -14,7 +14,7 @@ Include the JS and CSS files:
 **/
 
 
-/** Usage
+/** Use
 
 ```html
 <details-toggle>
