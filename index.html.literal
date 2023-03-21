@@ -33,7 +33,7 @@
     </details-toggle>
 
     ${ include('./docs/templates/content.literal', comments("./module.js")) }
-    ${ include('../literal/documentation/templates/element.literal', comments(
+    ${ include('../literal/documentation/templates/api.literal', comments(
         "./module.js",
         "./modules/properties.js",
         "./css/host.css"
