@@ -45,7 +45,7 @@ default, and opens to display all content when the summary content is clicked.
 
 ```html
 <details-toggle>
-    <h4 slot="summary">Crunchum ipsum</h4>
+    <h4 slot="summary">Click to open</h4>
     Crunchum ipsum dolor sit coder void, constructor function, sed
     do while loop python orientation semi colon incident. Duis aute
     irure indent tabs or spaces velit esse cilium buntum how crunchy
