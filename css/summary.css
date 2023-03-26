@@ -1,3 +1,4 @@
-::slotted(h4) {
+slot[name="summary"] {
     cursor: pointer;
+    display: block;
 }

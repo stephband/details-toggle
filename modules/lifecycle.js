@@ -26,6 +26,8 @@ function update(shadow, button, scrollHeight, maxHeight, slot, state) {
 }
 
 export default {
+    mode: 'closed',
+    focusable: true,
     construct: function(shadow) {
         /*
         Create a DOM of the form:

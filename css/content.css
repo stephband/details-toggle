@@ -1,5 +1,11 @@
 
-slot:not([name]) {
+/**
+::part(content)
+
+
+**/
+
+[part="content"] {
     /* Cannot grow bigger but can shrink smaller than its auto size */
     flex: 0 1 auto;
 

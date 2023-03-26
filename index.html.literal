@@ -5,55 +5,21 @@
     ${ include('../literal/documentation/templates/head.literal', './package.json') }
 
     <link rel="stylesheet" href="./module.css">
-
-    <style>
-    [is="details-toggle"] {
-        font-size: 1rem;
-    }
-    </style>
 </head>
 
-<body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
-    <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span>${ include('../literal/documentation/templates/version.literal', './package.json') }</h1>
-        <p>
-        The gods of the World Wide Web, in their eternal wisdom, delivered onto
-        us a <code>&lt;details&gt;</code> element that is impossible to style
-        with opening or closing transitions. The <code>&lt;details-toggle&gt;</code>
-        custom element provides an animated alternative.
-        </p>
-    </header>
-
-    <details-toggle class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <h4 slot="summary">Click to open</h4>
-        Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-        python orientation semi colon incident. Duis aute irure indent tabs or spaces
-        velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-        error memorandum qui officia nostrud operating system alertus.
-    </details-toggle>
-
-    ${ include('./docs/templates/content.literal', comments("./module.js")) }
-    ${ include('../literal/documentation/templates/api.literal', comments(
+<body class="4x-grid @1-6x-grid @2-7x-grid @3-9x-grid grid">
+    ${ include('../literal/documentation/templates/element.literal', comments(
         "./module.js",
         "./modules/properties.js",
         "./css/host.css"
     )) }
+
     ${ include('../literal/documentation/templates/contribute.literal', './package.json') }
-
-    <hr class="x1 3x @1-6x @2-x2 @2-7x"/>
-
-    <footer class="x1 3x @1-4x @2-x2">
-        <small class="block">
-            <p class="docs-text-09">Made by <a href="https://stephen.band">Stephen Band</a> at <a href="https://cruncher.ch"><img style="width: 20px; display: inline-block; vertical-align: -0.5em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.</p>
-            <p class="docs-text-09">This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a> and <a href="https://github.com/evilmartians/mono">Martian Mono</a>.</p>
-            <p class="docs-text-09">Images <code>&copy;2022</code> Stephen Band.</p>
-            <p class="docs-text-09">Fonts used for this documentation are not included as part of the open source license covering the use of the <code>&lt;details-toggle&gt;</code> element.</p>
-        </small>
-    </footer>
-
+    ${ include('../literal/documentation/templates/footer.literal', './package.json') }
     ${ include('../literal/documentation/templates/scripts.literal', './package.json') }
 
-    <script type="module">
+    <!-- Not needed because details-toggle is part of the documentation imports -->
+    <!--script type="module">
         import DetailsToggle from './module.js';
-    </script>
+    </script-->
 </body>

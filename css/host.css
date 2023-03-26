@@ -19,20 +19,6 @@
 
     font-size: inherit;
     line-height: inherit;
-
-    /* Inherited by the default slot. */
-    transition:
-        max-height 0.5s cubic-bezier(0.26, 0, 0.5, 1),
-        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
-        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
-}
-
-:host([open]) {
-    /* Inherited by the default slot. */
-    transition:
-        max-height 0.3s cubic-bezier(0.26, 0, 0.5, 1),
-        margin-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1),
-        padding-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1);
 }
 
 :host([hidden]) {
@@ -40,10 +26,10 @@
 }
 
 :host > slot[name="summary"] {
-
+    z-index: 2;
 }
 
-:host > slot:not([name]) {
+:host > [part="content"] {
     max-height: 0;
 
     margin-top: calc(-1 * var(--bleed));
@@ -55,12 +41,22 @@
     padding-right: var(--bleed);
     padding-bottom: 0;
 
-    transition: inherit;
+    transition:
+        max-height 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
+
+    z-index: 1;
 }
 
-:host([open]) > slot:not([name]) {
+:host([open]) > [part="content"] {
     max-height: none;
 
     margin-bottom: calc(-1 * var(--bleed));
     padding-bottom: var(--bleed);
+
+    transition:
+        max-height 0.3s cubic-bezier(0.26, 0, 0.5, 1),
+        margin-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.3s cubic-bezier(0.26, 0, 0.5, 1);
 }

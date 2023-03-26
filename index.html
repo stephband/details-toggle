@@ -3,9 +3,11 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <title>details-toggle</title>
+
+<meta charset="utf-8" />
 <meta name="author" content="Stephen Band" />
-<meta name="description" content="Documentation for details-toggle. The gods of the World Wide Web, in their eternal wisdom, delivered onto us a <details> element that is impossible to style with opening or closing transitions. The <details-toggle> custom element provides an animated alternative." />
+<meta name="description" content="The gods of the World Wide Web, in their eternal wisdom, delivered onto us a <details> element that is impossible to style with opening or closing transitions. The <details-toggle> custom element provides an animated alternative." />
 <meta name="viewport" content="width=device-width" />
 
 
@@ -16,8 +18,6 @@
 <meta property="og:image" content="https://stephen.band/details-toggle/card.jpg" />
 <meta property="og:url" content="https://stephen.band/details-toggle/" />
 
-
-<title>details-toggle</title>
 
 
 
@@ -33,56 +33,47 @@
 
 <script title="debug">
     window.DEBUG = true;
+    window.detailsToggleStylesheet = 'https://stephen.band/literal/documentation/build/details-toggle/shadow.css';
 </script>
 
-<link rel="stylesheet" href="../literal/documentation/module.css">
+<link rel="stylesheet" href="https://stephen.band/literal/documentation/build/module.css">
+<link rel="preload" as="style" href="https://stephen.band/literal/documentation/build/details-toggle/shadow.css">
 
 
     <link rel="stylesheet" href="./module.css">
-
-    <style>
-    [is="details-toggle"] {
-        font-size: 1rem;
-    }
-    </style>
 </head>
 
-<body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
-    <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span><span class="docs-text-10">1.0.0</span>
-</h1>
-        <p>
-        The gods of the World Wide Web, in their eternal wisdom, delivered onto
-        us a <code>&lt;details&gt;</code> element that is impossible to style
-        with opening or closing transitions. The <code>&lt;details-toggle&gt;</code>
-        custom element provides an animated alternative.
-        </p>
-    </header>
-
-    <details-toggle class="x1 3x @1-4x @2-x2 x-stretch y-start">
-        <h4 slot="summary">Click to open</h4>
-        Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
-        python orientation semi colon incident. Duis aute irure indent tabs or spaces
-        velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
-        error memorandum qui officia nostrud operating system alertus.
-    </details-toggle>
-
+<body class="4x-grid @1-6x-grid @2-7x-grid @3-9x-grid grid">
     
 
-<section class="x1 3x @1-4x @2-x2 x-stretch y-start">
-<h2 class="docs-text-02" id="install">Install</h2>
-<p>Download the latest release:</p>
-<p><a href="https://github.com/stephband/details-toggle/releases">github.com/stephband/details-toggle/releases</a></p>
-<p>Include the JS and CSS files:</p>
-<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./details-toggle.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./details-toggle.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<div class="x1 4x @3-x2 x-stretch y-start documentation-block block">
+    <h1 id="details-toggle"><span class="tag-brace">&lt;</span>details-toggle<span class="tag-brace">&gt;</span></h1>
+    <p>The gods of the World Wide Web, in their eternal wisdom, delivered onto us a
+<code>&lt;details&gt;</code> element that is impossible to style with opening or closing
+transitions. So the <code>&lt;details-toggle&gt;</code> custom element provides an animated
+alternative.</p>
+<details-toggle>
+    <h4 slot="summary">Click to open</h4>
+    Crunchum ipsum dolor sit coder void, constructor function, sed do while loop
+    python orientation semi colon incident. Duis aute irure indent tabs or spaces
+    velit esse cilium buntum how crunchy duntum. Excepteur tranquilis syntax
+    error memorandum qui officia nostrud operating system alertus.
+</details-toggle>
 
-</section>
 
+<h2 id="import">Import</h2>
+<!--
+Download the latest release:
 
+[github.com/stephband/details-toggle/releases](https://github.com/stephband/details-toggle/releases)
+-->
 
-<section class="x1 3x @1-4x @2-x2 x-stretch y-start">
-<h2 class="docs-text-02" id="use">Use</h2>
+<p>Include the CSS:</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./details-toggle.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>Import and register the <code>&lt;details-toggle&gt;</code> custom element, upgrading any
+instances already in the DOM:</p>
+<pre><code class="language-js"><span class="token keyword">import</span> DetailsToggle <span class="token keyword">from</span> <span class="token string">'../literal/documentation/templates/details-toggle.js'</span><span class="token punctuation">;</span></code></pre>
+<h2 id="use">Use</h2>
 <p>A <code>details-toggle</code> is collapsed to the height of its <code>slot=&quot;summary&quot;</code> content by
 default, and opens to display all content when the summary content is clicked.</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details-toggle</span><span class="token punctuation">></span></span>
@@ -93,16 +84,16 @@ default, and opens to display all content when the summary content is clicked.</
     duntum.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>details-toggle</span><span class="token punctuation">></span></span></code></pre>
 
-</section>
+</div>
 
 
-    <div class="x1 3x @2-x2 x-stretch y-start">
+<div class="x1 4x @1-3x @3-x2 x-stretch y-start">
     
-    <h3 class="doctext-03">Attributes</h3>
+    <h3>Attributes</h3>
     
 
 <details-toggle class="attribute-details-toggle" id="attribute-open">
-    <h4 class="attribute-docs-text-05 docs-text-05" slot="summary">
+    <h4 class="attribute-text text-05" slot="summary">
         <code class="token language-html">open</code>
     </h4>
 
@@ -117,11 +108,11 @@ default, and opens to display all content when the summary content is clicked.</
     
 
     
-    <h3 class="doctext-03">Properties</h3>
+    <h3>Properties</h3>
     
 
 <details-toggle class="property-details-toggle" id="property-open">
-    <h4 class="property-docs-text-05 docs-text-05" slot="summary">
+    <h4 class="property-text text-05" slot="summary">
         <code class="property language-js">.open</code>
     </h4>
 
@@ -138,11 +129,11 @@ when the <code>details-toggle</code> is open, <code>false</code> when it is not.
     
 
     
-    <h3 class="doctext-03">Events</h3>
+    <h3>Events</h3>
     
 
 <details-toggle class="string-details-toggle" id="string-details-activate">
-    <h4 class="string-docs-text-05 docs-text-05" slot="summary">
+    <h4 class="string-text text-05" slot="summary">
         <code class=" language-js">"details-activate"</code>
     </h4>
 
@@ -153,7 +144,7 @@ when the <code>details-toggle</code> is open, <code>false</code> when it is not.
 
 
 <details-toggle class="string-details-toggle" id="string-details-deactivate">
-    <h4 class="string-docs-text-05 docs-text-05" slot="summary">
+    <h4 class="string-text text-05" slot="summary">
         <code class=" language-js">"details-deactivate"</code>
     </h4>
 
@@ -164,17 +155,17 @@ when the <code>details-toggle</code> is open, <code>false</code> when it is not.
 
 </div>
 
-<div class="x1 3x @1-x4 @2-x5 x-stretch y-start">
+<div class="x1 4x @1-x4 @1-3x @3-x5 x-stretch y-start">
     
     
     
 
     
-    <h3 class="doctext-03">Variables</h3>
+    <h3>Variables</h3>
     
 
 <details-toggle class="var-details-toggle" id="var-bleed">
-    <h4 class="var-docs-text-05 docs-text-05" slot="summary">
+    <h4 class="var-text text-05" slot="summary">
         <code class=" language-css">--bleed</code>
     </h4>
 
@@ -187,6 +178,8 @@ This variable controls the bleed distance.</p>
 
 
 </div>
+
+
 
     
 <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
@@ -208,24 +201,29 @@ This variable controls the bleed distance.</p>
 
 
 
+    <hr class="x1 4x @1-6x @2-7x @3-x2"/>
 
-    <hr class="x1 3x @1-6x @2-x2 @2-7x"/>
+<footer class="x1 4x @3-x2 footer-block block">
+    <small class="block">
+        <p class="text-10">
+        Built by <a href="https://stephen.band">Stephen Band</a> at
+        <a href="https://cruncher.ch"><img style="width: 1.366666667em; display: inline-block; vertical-align: bottom; margin-top: -0.1em; margin-bottom: -0.1em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.
+        </p>
 
-    <footer class="x1 3x @1-4x @2-x2">
-        <small class="block">
-            <p class="docs-text-09">Made by <a href="https://stephen.band">Stephen Band</a> at <a href="https://cruncher.ch"><img style="width: 20px; display: inline-block; vertical-align: -0.5em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.</p>
-            <p class="docs-text-09">This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a> and <a href="https://github.com/evilmartians/mono">Martian Mono</a>.</p>
-            <p class="docs-text-09">Images <code>&copy;2022</code> Stephen Band.</p>
-            <p class="docs-text-09">Fonts used for this documentation are not included as part of the open source license covering the use of the <code>&lt;details-toggle&gt;</code> element.</p>
-        </small>
-    </footer>
+        <p class="text-10">
+        This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a>
+        and <a href="https://github.com/evilmartians/mono">Martian Mono</a>. Fonts
+        used for documentation not included as part of the open source license
+        covering the use of the <code>&lt;details-toggle&gt;</code> element.
+        </p>
+    </small>
+</footer>
 
-    <script type="module">
-import '../literal/documentation/module.js';
-</script>
+    <script type="module" src="https://stephen.band/literal/documentation/build/module.js"></script>
 
 
-    <script type="module">
+    <!-- Not needed because details-toggle is part of the documentation imports -->
+    <!--script type="module">
         import DetailsToggle from './module.js';
-    </script>
+    </script-->
 </body>
