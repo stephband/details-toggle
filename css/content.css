@@ -2,7 +2,25 @@
 /**
 ::part(content)
 
+Style the content block of the `<details-toggle>`. Use this to alter the
+opening/closing transition. To continue to use the toggle with an opening/closing
+animation `max-height`, `margin-bottom` and `padding-bottom` must be included:
 
+```css
+details-toggle::part(content) {
+    transition:
+        max-height 0.5s cubic-bezier(0.25, 0, 0.5, 1),
+        margin-bottom 0.5s cubic-bezier(0.25, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.25, 0, 0.5, 1);
+}
+
+details-toggle[open]::part(content) {
+    transition:
+        max-height 0.3s cubic-bezier(0.25, 0, 0.5, 1),
+        margin-bottom 0.3s cubic-bezier(0.25, 0, 0.5, 1),
+        padding-bottom 0.3s cubic-bezier(0.25, 0, 0.5, 1);
+}
+```
 **/
 
 [part="content"] {

@@ -11,7 +11,9 @@
     ${ include('../literal/documentation/templates/element.literal', comments(
         "./module.js",
         "./modules/properties.js",
-        "./css/host.css"
+        "./css/host.css",
+        "./css/summary.css",
+        "./css/content.css"
     )) }
 
     ${ include('../literal/documentation/templates/contribute.literal', './package.json') }

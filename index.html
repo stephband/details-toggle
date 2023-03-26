@@ -157,8 +157,34 @@ when the <code>details-toggle</code> is open, <code>false</code> when it is not.
 
 <div class="x1 4x @1-x4 @1-3x @3-x5 x-stretch y-start">
     
+    <h3>Parts</h3>
     
-    
+
+<details-toggle class="part-details-toggle" id="part-content">
+    <h4 class="part-text text-05" slot="summary">
+        <code class=" language-css">::part(content)</code>
+    </h4>
+
+    <p>Style the content block of the <code>&lt;details-toggle&gt;</code>. Use this to alter the
+opening/closing transition. To continue to use the toggle with an opening/closing
+animation <code>max-height</code>, <code>margin-bottom</code> and <code>padding-bottom</code> must be included:</p>
+<pre><code class="language-css"><span class="token selector">details-toggle::part(content)</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span>
+        max-height 0.5s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        margin-bottom 0.5s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        padding-bottom 0.5s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">details-toggle[open]::part(content)</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span>
+        max-height 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        margin-bottom 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        padding-bottom 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.25<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+</details-toggle>
+
+
 
     
     <h3>Variables</h3>
@@ -201,20 +227,20 @@ This variable controls the bleed distance.</p>
 
 
 
-    <hr class="x1 4x @1-6x @2-7x @3-x2"/>
+    <hr class="x1 4x @3-x2"/>
 
 <footer class="x1 4x @3-x2 footer-block block">
     <small class="block">
         <p class="text-10">
-        Built by <a href="https://stephen.band">Stephen Band</a> at
-        <a href="https://cruncher.ch"><img style="width: 1.366666667em; display: inline-block; vertical-align: bottom; margin-top: -0.1em; margin-bottom: -0.1em;" src="https://cruncher.ch/static/images/logo.svg" alt="The Cruncher logo"/> Cruncher</a>.
+        Built by <a href="https://stephen.band">Stephen Band</a> for
+        <a href="https://cruncher.ch"><img style="width: 1.366666667em; display: inline-block; vertical-align: bottom; margin-top: -0.1em; margin-bottom: -0.1em;" src="https://cruncher.ch/static/images/logo.svg" alt="Cruncher logo"/> Cruncher</a>.
         </p>
 
         <p class="text-10">
-        This page is set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a>
+        This documentation set in <a href="https://www.swisstypefaces.com/fonts/euclid/">Euclid</a>
         and <a href="https://github.com/evilmartians/mono">Martian Mono</a>. Fonts
-        used for documentation not included as part of the open source license
-        covering the use of the <code>&lt;details-toggle&gt;</code> element.
+        used for documentation not included as part of the license covering the
+        use of the <code>details-toggle</code> element.
         </p>
     </small>
 </footer>
