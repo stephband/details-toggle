@@ -17,6 +17,7 @@
     )) }
 
     ${ include('../literal/documentation/templates/contribute.literal', './package.json') }
+    ${ include('../literal/documentation/templates/credit.literal', './package.json') }
     ${ include('../literal/documentation/templates/footer.literal', './package.json') }
     ${ include('../literal/documentation/templates/scripts.literal', './package.json') }
 
