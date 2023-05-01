@@ -1,3 +1,10 @@
+
+/**
+::part(summary)
+
+Style the button of the `<details-toggle>`.
+**/
+
 slot[name="summary"] {
     cursor: pointer;
     display: block;

@@ -40,7 +40,7 @@ export default {
 
         const style   = styles(':host', shadow)[0];
         const slot    = create('slot', { part: 'content' });
-        const summary = create('slot', { name: 'summary' });
+        const summary = create('slot', { part: 'summary', name: 'summary' });
         const button  = create('button', { type: "button", html: "Open" });
 
         summary.append(button);
