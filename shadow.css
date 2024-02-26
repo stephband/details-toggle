@@ -1,7 +1,7 @@
 
 /*@import '../bolt/elements/html.css';*/
 
-@import '../bolt/elements/reset.css';
+@import './css/reset.css';
 @import './css/host.css';
 @import './css/summary.css';
 @import './css/content.css';
