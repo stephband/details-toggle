@@ -50,6 +50,11 @@ export default {
 
         events('click', summary).each((e) => this.open = !this.open);
 
+        // On pointerdown on a focusable, focus is delegated to the first
+        // focusable element inside its dom, which can make the content slot
+        // scroll up. Put it back down.
+        this.addEventListener('focusin', (e) => slot.scrollTop = 0);
+
         // Internal view object
         assign(getInternals(this), { button, changes, element: this, slot, style });
     },

@@ -36,6 +36,7 @@ function close(host, element) {
     element.style.marginBottom  = marginBottom + 'px';
 
     host.removeAttribute('open');
+    host.scrollTop = 0;
 
     requestAnimationFrame(() => {
         element.style.transition    = '';
@@ -89,12 +90,12 @@ export default {
             if (value) {
                 state.open = true;
                 open(this, slot);
-                trigger('overflow-activate', this);
+                trigger('folder-activate', this);
             }
             else {
                 state.open = false;
                 close(this, slot);
-                trigger('overflow-deactivate', this);
+                trigger('folder-deactivate', this);
             }
         }
     }
