@@ -19,6 +19,11 @@
 
     font-size: inherit;
     line-height: inherit;
+
+    /* Make user-set paddings and margins transition on details toggle */
+    transition:
+        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
 }
 
 :host([hidden]) {
