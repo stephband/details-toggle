@@ -1,8 +1,8 @@
 
-import events           from '../../dom/modules/events.js';
-import { trigger }      from '../../dom/modules/trigger.js';
-import { px }           from '../../dom/modules/parse-length.js';
-import { getInternals } from '../../dom/modules/element.js';
+import events           from 'dom/events.js';
+import { trigger }      from 'dom/trigger.js';
+import { px }           from 'dom/parse-length.js';
+import { getInternals } from 'dom/element.js';
 
 
 function open(host, element) {

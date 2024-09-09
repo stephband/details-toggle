@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    ${ include('../literal/documentation/templates/head.literal', './package.json') }
+    ${ include('literal/documentation/templates/head.literal', './package.json') }
 
     <link rel="stylesheet" href="./module.css">
 </head>
 
 <body class="4x-grid @1-6x-grid @2-7x-grid @3-9x-grid grid">
-    ${ include('../literal/documentation/templates/element.literal', comments(
+    ${ include('literal/documentation/templates/element.literal', comments(
         "./module.js",
         "./modules/properties.js",
         "./css/host.css",
@@ -16,10 +16,10 @@
         "./css/content.css"
     )) }
 
-    ${ include('../literal/documentation/templates/contribute.literal', './package.json') }
-    ${ include('../literal/documentation/templates/credit.literal', './package.json') }
-    ${ include('../literal/documentation/templates/footer.literal', './package.json') }
-    ${ include('../literal/documentation/templates/scripts.literal', './package.json') }
+    ${ include('literal/documentation/templates/contribute.literal', './package.json') }
+    ${ include('literal/documentation/templates/credit.literal', './package.json') }
+    ${ include('literal/documentation/templates/footer.literal', './package.json') }
+    ${ include('literal/documentation/templates/scripts.literal', './package.json') }
 
     <!-- Not needed because details-toggle is part of the documentation imports -->
     <!--script type="module">

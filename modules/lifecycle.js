@@ -1,10 +1,10 @@
 
-import create           from '../../dom/modules/create.js';
-import events           from '../../dom/modules/events.js';
-import styles           from '../../dom/modules/styles.js';
-import Distributor      from '../../dom/modules/distributor.js';
-import { px }           from '../../dom/modules/parse-length.js';
-import { getInternals } from '../../dom/modules/element.js';
+import create           from 'dom/create.js';
+import events           from 'dom/events.js';
+import styles           from 'dom/styles.js';
+import Distributor      from 'dom/distributor.js';
+import { px }           from 'dom/parse-length.js';
+import { getInternals } from 'dom/element.js';
 
 const assign = Object.assign;
 
