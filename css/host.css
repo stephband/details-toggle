@@ -9,7 +9,7 @@
     **/
     --bleed: 1rem;
 
-    display: flex;
+    display: flex !important;
     /* Up to down */
     flex-direction: column;
     /* X direction */
