@@ -19,6 +19,12 @@
 
     font-size: inherit;
     line-height: inherit;
+
+    /* These properties are not styled here but it is useful to give them
+       transitions in case they are styled by the user */
+    transition:
+        margin-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1),
+        padding-bottom 0.5s cubic-bezier(0.26, 0, 0.5, 1);
 }
 
 :host([hidden]) {

@@ -54,7 +54,7 @@ default, and opens to display all content when the summary content is clicked.
 ```
 **/
 
-import element    from '../dom/modules/element.js';
+import element    from 'dom/element.js';
 import lifecycle  from './modules/lifecycle.js';
 import properties from './modules/properties.js';
 

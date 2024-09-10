@@ -1,10 +1,10 @@
 
-import create           from '../../dom/modules/create.js';
-import events           from '../../dom/modules/events.js';
-import styles           from '../../dom/modules/styles.js';
-import Distributor      from '../../dom/modules/distributor.js';
-import { px }           from '../../dom/modules/parse-length.js';
-import { getInternals } from '../../dom/modules/element.js';
+import create           from 'dom/create.js';
+import events           from 'dom/events.js';
+import styles           from 'dom/styles.js';
+import Distributor      from 'dom/distributor.js';
+import { px }           from 'dom/parse-length.js';
+import { getInternals } from 'dom/element.js';
 
 const assign = Object.assign;
 
@@ -49,6 +49,11 @@ export default {
         const changes = events('slotchange', slot);
 
         events('click', summary).each((e) => this.open = !this.open);
+
+        // On pointerdown on a focusable, focus is delegated to the first
+        // focusable element inside its dom, which can make the content slot
+        // scroll up. Put it back down.
+        this.addEventListener('focusin', (e) => slot.scrollTop = 0);
 
         // Internal view object
         assign(getInternals(this), { button, changes, element: this, slot, style });
