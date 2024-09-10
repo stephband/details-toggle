@@ -36,6 +36,9 @@
 }
 
 :host > [part="content"] {
+    /* Allow defining min-height on the host. Assumes the host can never have
+       less height than the content. */
+    min-height: inherit;
     max-height: 0;
 
     margin-top: calc(-1 * var(--bleed));
