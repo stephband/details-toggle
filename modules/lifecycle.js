@@ -2,11 +2,21 @@
 import create           from 'dom/create.js';
 import events           from 'dom/events.js';
 import styles           from 'dom/styles.js';
-import Distributor      from 'dom/distributor.js';
+import isPrimaryButton  from 'dom/is-primary-button.js';
 import { px }           from 'dom/parse-length.js';
 import { getInternals } from 'dom/element.js';
 
 const assign = Object.assign;
+
+function isIgnorable(e) {
+    // Default is prevented indicates that this click has already
+    // been handled. Save ourselves the overhead of further handling.
+    if (e.defaultPrevented) { return true; }
+
+    // Ignore mousedowns on any button other than the left (or primary)
+    // mouse button, or when a modifier key is pressed.
+    if (!isPrimaryButton(e)) { return true; }
+}
 
 function update(shadow, button, scrollHeight, maxHeight, slot, state) {
     if (scrollHeight > maxHeight) {
@@ -49,6 +59,8 @@ export default {
         const changes = events('slotchange', slot);
 
         events('click', summary).each((e) => {
+            // Ignore right-clicks, option-clicks
+            if (isIgnorable(e)) { return; }
             // Prevent default to mark as handled
             e.preventDefault();
             // Toggle the element
