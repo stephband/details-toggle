@@ -48,7 +48,12 @@ export default {
 
         const changes = events('slotchange', slot);
 
-        events('click', summary).each((e) => this.open = !this.open);
+        events('click', summary).each((e) => {
+            // Prevent default to mark as handled
+            e.preventDefault();
+            // Toggle the element
+            this.open = !this.open;
+        });
 
         // On pointerdown on a focusable, focus is delegated to the first
         // focusable element inside its dom, which can make the content slot
