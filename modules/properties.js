@@ -52,7 +52,6 @@ export default {
         open=""
         A boolean attribute describing the state of the `details-toggle`.
         **/
-
         attribute: function(value) {
             this.open = value !== null;
         },
@@ -62,17 +61,6 @@ export default {
         A boolean property describing the state of the `details-toggle`: `true`
         when the `details-toggle` is open, `false` when it is not.
         **/
-
-        /**
-        'details-activate'
-        Sent from `details-toggle` when opened.
-        **/
-
-        /**
-        'details-deactivate'
-        Sent from `details-toggle` when closed.
-        **/
-
         get: function() {
             const state = getInternals(this);
             return state.open;
@@ -83,19 +71,27 @@ export default {
             const { button, slot, style } = state;
 
              // If toggle has not changed do nothing
-            if (!!value === state.open) {
-                return;
-            }
+            if (!!value === state.open) return;
 
             if (value) {
                 state.open = true;
                 open(this, slot);
-                trigger('folder-activate', this);
+
+                /**
+                'open'
+                Sent from `details-toggle` when opened.
+                **/
+                trigger('open', this);
             }
             else {
                 state.open = false;
                 close(this, slot);
-                trigger('folder-deactivate', this);
+
+                /**
+                'close'
+                Sent from `details-toggle` when closed.
+                **/
+                trigger('close', this);
             }
         }
     }
