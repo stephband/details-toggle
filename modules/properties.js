@@ -2,7 +2,7 @@
 import events           from 'dom/events.js';
 import { trigger }      from 'dom/trigger.js';
 import { px }           from 'dom/parse-length.js';
-import { getInternals } from 'dom/element.js';
+import { getInternals } from 'dom/element-1.js';
 
 
 function open(host, element) {
