@@ -4,7 +4,6 @@ import events           from 'dom/events.js';
 import styles           from 'dom/styles.js';
 import isPrimaryButton  from 'dom/is-primary-button.js';
 import { px }           from 'dom/parse-length.js';
-import { getInternals } from 'dom/element.js';
 
 const assign = Object.assign;
 
@@ -23,7 +22,7 @@ export default {
 
     focusable: true,
 
-    construct: function(shadow) {
+    construct: function(shadow, internals) {
         // Create a DOM of the form:
         // <link rel="stylesheet" href="/source/bolt/elements/details-toggle.shadow.css" />
         // <slot name="summary"><button></button></slot>
@@ -53,7 +52,7 @@ export default {
         this.addEventListener('focusin', (e) => slot.scrollTop = 0);
 
         // Internal view object
-        assign(getInternals(this), { button, changes, element: this, slot, style });
+        assign(internals, { button, changes, element: this, slot, style });
     },
 
     load: function(shadow) {
