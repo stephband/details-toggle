@@ -62,19 +62,19 @@ export default {
         when the `details-toggle` is open, `false` when it is not.
         **/
         get: function() {
-            const state = getInternals(this);
-            return state.open;
+            const internals = getInternals(this);
+            return internals.open;
         },
 
         set: function(value) {
-            const state = getInternals(this);
-            const { button, slot, style } = state;
+            const internals = getInternals(this);
+            const { button, slot, style } = internals;
 
              // If toggle has not changed do nothing
-            if (!!value === state.open) return;
+            if (!!value === internals.open) return;
 
             if (value) {
-                state.open = true;
+                internals.open = true;
                 open(this, slot);
 
                 /**
@@ -84,7 +84,7 @@ export default {
                 trigger('open', this);
             }
             else {
-                state.open = false;
+                internals.open = false;
                 close(this, slot);
 
                 /**
